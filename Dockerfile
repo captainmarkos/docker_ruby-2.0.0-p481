@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 RUN apt-get update && apt-get install -y \
     build-essential zlib1g-dev libssl-dev libreadline6-dev libyaml-dev \
-    wget ndsutils libbz2-dev \
+    wget dnsutils libbz2-dev \
     libncurses5 libncurses5-dev \
     sqlite3 libsqlite3-dev \
     libcurl4-gnutls-dev \
