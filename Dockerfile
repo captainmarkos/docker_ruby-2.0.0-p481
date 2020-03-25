@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y \
     libncurses5 libncurses5-dev \
     sqlite3 libsqlite3-dev \
     libcurl4-gnutls-dev \
-    libmysqlclient-dev
+    libmysqlclient-dev \
+    libtidy-0.99-0 libtidy-dev
 
 SHELL ["/bin/bash", "-l", "-c"]
 
