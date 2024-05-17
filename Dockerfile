@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
     sqlite3 libsqlite3-dev \
     libcurl4-gnutls-dev \
     libmysqlclient-dev \
-    libtidy-0.99-0 libtidy-dev
+    libtidy-0.99-0 libtidy-dev \
+    libcorelinux-dev
 
 SHELL ["/bin/bash", "-l", "-c"]
 
@@ -17,3 +18,12 @@ RUN cd /usr/local/src && \
     cd ruby-2.0.0-p481/ && \
     ./configure --prefix=/usr/local && \
     make && make install
+
+
+# docker build --platform=linux/amd64 -f Dockerfile -t captainmarkos/ruby-2.0.0-p481:latest .
+# docker tag captainmarkos/ruby-2.0.0-p481:latest us-central1-docker.pkg.dev/captainmarkos/captainmarkos/ruby-2.0.0-p481:latest
+#
+# docker logout
+# docker login
+#
+# docker push captainmarkos/ruby-2.0.0-p481:latest us-central1-docker.pkg.dev/captainmarkos/ruby-2.0.0-p481:latest
